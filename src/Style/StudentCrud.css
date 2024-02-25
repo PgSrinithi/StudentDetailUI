@@ -1,0 +1,118 @@
+.title{
+    margin: 20px 30px;
+}
+
+.studentName-field,
+.course-field {
+    height: 40px;
+    width: 90%;
+    margin: 10px 10px 0px 0px;
+    border-radius: 5px;
+    border-color: #bbb4b4;
+    font-size: 16px;
+}
+
+.form-group {
+    display: block;
+    margin-left: 30px;
+    margin-bottom: 10px;
+}
+
+.field-label {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.btn-group {
+    margin-left: 30px;
+
+    .btn-reset {
+        height: 40px;
+        width: 75px;
+        border-radius: 5px;
+        background-color: rgb(34 98 189);
+        border-color: transparent;
+        margin-right: 10px;
+        color: white;
+        font-size: 15px;
+    }
+
+    .btn-save {
+        height: 40px;
+        width: 75px;
+        border-radius: 5px;
+        background-color: #ffb414;
+        border-color: transparent;
+        color: black;
+        font-size: 15px;
+    }
+}
+
+
+.tableContainer {
+    padding: 10px 30px;
+
+    .tableData {
+        width: 90%;
+        border: 1px solid black;
+        table-layout: fixed;
+
+        .tableHead {
+            text-align: left;
+            height: 40px;
+            color: white;
+            background-color: rgb(71, 68, 68);
+
+            th {
+                padding: 10px;
+            }
+        }
+
+        .tableBody {
+            font-size: 16px;
+        }
+
+        .tableBody {
+            .tableRow {
+                font-size: 17px;
+                height: 40px;
+            }
+
+            td {
+                border: 1px solid rgb(163, 162, 162);
+                padding: 10px;
+            }
+        }
+
+        .btn-edit {
+            height: 30px;
+            width: 50px;
+            font-size: 15px;
+            margin-right: 10px;
+            background-color: #ffb414;
+            border: transparent;
+        }
+
+        .btn-delete {
+            height: 30px;
+            width: 70px;
+            font-size: 15px;
+            background-color: rgb(212, 61, 34);
+            border: transparent;
+        }
+    }
+
+    .checkbox {
+        height: 15px;
+        width: 15px;
+    }
+}
+
+.btn-deleteAll {
+    height: 40px;
+    width: 100px;
+    font-size: 15px;
+    background-color: rgb(212, 61, 34);
+    border: transparent;
+    border-radius: 5px;
+}
