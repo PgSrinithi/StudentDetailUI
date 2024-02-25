@@ -4,6 +4,7 @@ import '../Style/StudentCrud.css';
 import { Grid } from '@material-ui/core';
 
 function StudentCrud() {
+    const fetch = "http://localhost:8080";
     const [id, setId] = useState(0);
     const [studentList, setStudentList] = useState([]);
     const [name, setName] = useState("");
@@ -15,19 +16,19 @@ function StudentCrud() {
     }, []);
 
     const load = async () => {
-        const result = await axios.get("http://localhost:5132/api/Student/GetStudent");
+        const result = await axios.get(`${fetch}/api/Student/GetStudent`);
         setStudentList(result.data);
     }
 
     const saveOrUpdateData = async () => {
         if (id === 0) {
-            await axios.post("http://localhost:5132/api/Student/AddStudent", {
+            await axios.post(`${fetch}/api/Student/AddStudent`, {
                 studentName: name,
                 course: course
             });
         }
         else {
-            await axios.patch("http://localhost:5132/api/Student/UpdateStudent", {
+            await axios.patch(`${fetch}/api/Student/UpdateStudent`, {
                 id: id,
                 studentName: name,
                 course: course
@@ -47,7 +48,7 @@ function StudentCrud() {
     }
 
     const deleteRecord = async (id) => {
-        const response = await axios.delete("http://localhost:5132/api/Student/DeleteStudent/" + id);
+        const response = await axios.delete(`${fetch}/api/Student/DeleteStudent/` + id);
         if (response) {
             alert("Student deleted successfully");
         }
@@ -61,7 +62,7 @@ function StudentCrud() {
     }
 
     const deleteSelectedStudents = async () => {
-        const response = await axios.delete("http://localhost:5132/api/Student/BulkDeletion", { data: bulkDeletionIds });
+        const response = await axios.delete(`${fetch}/api/Student/BulkDeletion`, { data: bulkDeletionIds });
         if (response) {
             alert("Selected students deleted successfully");
         }
